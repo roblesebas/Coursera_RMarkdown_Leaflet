@@ -15,14 +15,14 @@ Create a web page using R Markdown that features a map created with Leaflet.
 
 Host your webpage on either GitHub Pages, RPubs, or NeoCities.
 
-Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. 
 
 # The code of the map
 
-```{r}
+```{r, warning=FALSE}
 library(leaflet)
-my_map <- leaflet() %>% 
-  addTiles() 
+my_map <- leaflet() %>% addTiles() %>%
+        addMarkers(lat=5.064287, lng=-75.501979, 
+             popup="Sebas' home")
 my_map
 ```
-
